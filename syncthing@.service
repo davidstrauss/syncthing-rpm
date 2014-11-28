@@ -1,0 +1,21 @@
+[Unit]
+Description=Syncthing
+
+[Service]
+Type=simple
+Environment=STNORESTART=yes
+ExecStart=/usr/bin/syncthing
+Restart=on-failure
+
+User=%I
+CapabilityBoundingSet=
+LimitNPROC=64
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectSystem=full
+RestrictAddressFamilies=AF_INET AF_INET6
+RestrictAddressFamilies=native
+
+[Install]
+WantedBy=multi-user.target
