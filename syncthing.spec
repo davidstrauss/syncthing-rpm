@@ -35,7 +35,7 @@ mkdir -p %{buildroot}%{_unitdir}
 install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
 
 install -d %{buildroot}%{_bindir}
-install -p -m 0755 ./syncthing %{buildroot}%{_bindir}/syncthing
+install -p -m 0755 ./bin/syncthing %{buildroot}%{_bindir}/syncthing
 
 %post
 %systemd_post %{name}@.service
