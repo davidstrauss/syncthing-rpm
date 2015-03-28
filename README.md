@@ -6,9 +6,10 @@ RPM packaging for Syncthing. Please use Copr to install directly.
 Building and installing an RPM
 ---------------
 
-    sudo yum install -y tito git
+    sudo yum install -y tito git golang git-annex
     git clone git@github.com:davidstrauss/syncthing-rpm.git
     cd syncthing-rpm
+    git annex get
     tito build --rpm --offline
     sudo rpm -Uvh PATH-TO-RPM
 
