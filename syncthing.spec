@@ -53,5 +53,9 @@ install -p -m 0755 ./bin/syncthing %{buildroot}%{_bindir}/syncthing
 %{_unitdir}/%{name}@.service
 
 %changelog
+* Sat Mar 28 2015 Alexey Pakseykin <uvsmtid@gmail.com> 0.10.29-1.0
+- Update spec file to the latest v0.10.29 syncthing sources.
+
+
 * Fri Nov 28 2014 David Strauss <thunderbirdtr@fedoraproject.org> 0.10.8-2.0
 - Initial version
