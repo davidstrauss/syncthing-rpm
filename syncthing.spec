@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:syncthing
-Version:0.10.8
-Release:2.0%{?dist}
+Version:0.10.29
+Release:1.0%{?dist}
 Summary:Syncthing
 License:MIT
 URL:http://syncthing.net/
