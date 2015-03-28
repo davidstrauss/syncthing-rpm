@@ -48,7 +48,7 @@ install -p -m 0755 ./bin/syncthing %{buildroot}%{_bindir}/syncthing
 
 %files
 %defattr(-,root,root,-)
-%doc README.txt LICENSE.txt CONTRIBUTORS.txt
+%doc README.md LICENSE AUTHORS
 %{_bindir}/syncthing
 %{_unitdir}/%{name}@.service
 
