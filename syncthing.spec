@@ -41,7 +41,7 @@ install -p -m 0755 ./syncthing %{buildroot}%{_bindir}/syncthing
 %systemd_post %{name}@.service
 
 %preun
-%systemd_preun %{name}@.servie
+%systemd_preun %{name}@.service
 
 %postun
 %systemd_postun_with_restart %{name}@.service 
