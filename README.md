@@ -1,7 +1,9 @@
 
 # Syncthing RPM #
 
-The steps were tested on Fedora 21 with Syncthing code [v0.10.29][1].
+The steps were tested on Fedora 21 with Syncthing:
+*   [v0.10.29][1]
+*   [v0.11.25][2]
 
 ## Automated script ##
 
@@ -80,7 +82,30 @@ The steps were tested on Fedora 21 with Syncthing code [v0.10.29][1].
     firefox 127.0.0.1:36428
     ```
 
+# Updating this repository for new Syncthing release #
+
+
+*   Update binaries in using `git annex`:
+
+    ```
+    wget wget https://github.com/syncthing/syncthing/archive/v0.11.25.tar.gz
+    git annex add v0.11.25.tar.gz
+    ```
+
+*   Update all references to old version by new version.
+
+    ```
+    grep -r 0.10.29
+    ```
+
+*   Create tag for local repository:
+
+    ```
+    git tag -f -a syncthing-0.11.25-1.0
+    ```
+
 # [footer] #
 
 [1]: https://github.com/syncthing/syncthing/releases/tag/v0.10.29
+[2]: https://github.com/syncthing/syncthing/releases/tag/v0.11.25
 

@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:syncthing
-Version:0.10.29
+Version:0.11.25
 Release:1.0%{?dist}
 Summary:Syncthing
 License:MIT
@@ -53,9 +53,13 @@ install -p -m 0755 ./bin/syncthing %{buildroot}%{_bindir}/syncthing
 %{_unitdir}/%{name}@.service
 
 %changelog
+
+* Mon Sep 28 2015 Alexey Pakseykin <uvsmtid@gmail.com> 0.11.25-1.0
+- Update to Syncthing v0.11.25.
+
 * Sat Mar 28 2015 Alexey Pakseykin <uvsmtid@gmail.com> 0.10.29-1.0
 - Update spec file to the latest v0.10.29 syncthing sources.
 
-
 * Fri Nov 28 2014 David Strauss <thunderbirdtr@fedoraproject.org> 0.10.8-2.0
 - Initial version
+
