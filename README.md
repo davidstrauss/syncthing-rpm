@@ -98,6 +98,12 @@ The steps were tested on Fedora 21 with Syncthing:
     grep -r 0.10.29
     ```
 
+*   Create tag for local repository:
+
+    ```
+    git tag -f -a syncthing-0.11.25-1.0
+    ```
+
 # [footer] #
 
 [1]: https://github.com/syncthing/syncthing/releases/tag/v0.10.29
