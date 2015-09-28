@@ -1,7 +1,9 @@
 
 # Syncthing RPM #
 
-The steps were tested on Fedora 21 with Syncthing code [v0.10.29][1].
+The steps were tested on Fedora 21 with Syncthing:
+*   [v0.10.29][1]
+*   [v0.11.25][2]
 
 ## Automated script ##
 
@@ -83,4 +85,5 @@ The steps were tested on Fedora 21 with Syncthing code [v0.10.29][1].
 # [footer] #
 
 [1]: https://github.com/syncthing/syncthing/releases/tag/v0.10.29
+[2]: https://github.com/syncthing/syncthing/releases/tag/v0.11.25
 
