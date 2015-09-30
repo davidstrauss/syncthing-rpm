@@ -51,7 +51,7 @@ RPM_PATH="$(sudo -u "${USERNAME}" rpm --query --specfile 'syncthing.spec' --qf "
 
 sudo rpm -Uvh --force "${RPM_PATH}"
 
-sudo systemctl enable syncthing@uvsmtid
-sudo systemctl restart syncthing@uvsmtid
-sudo systemctl status syncthing@uvsmtid
+sudo systemctl enable syncthing@"${USERNAME}"
+sudo systemctl restart syncthing@"${USERNAME}"
+sudo systemctl status syncthing@"${USERNAME}"
 
