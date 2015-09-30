@@ -1,8 +1,8 @@
 %global debug_package %{nil}
 
 Name:syncthing
-Version:0.10.8
-Release:2.0%{?dist}
+Version:0.11.25
+Release:1.0%{?dist}
 Summary:Syncthing
 License:MIT
 URL:http://syncthing.net/
@@ -35,23 +35,31 @@ mkdir -p %{buildroot}%{_unitdir}
 install -p -m 0644 %{S:1} %{buildroot}%{_unitdir}
 
 install -d %{buildroot}%{_bindir}
-install -p -m 0755 ./syncthing %{buildroot}%{_bindir}/syncthing
+install -p -m 0755 ./bin/syncthing %{buildroot}%{_bindir}/syncthing
 
 %post
 %systemd_post %{name}@.service
 
 %preun
-%systemd_preun %{name}@.servie
+%systemd_preun %{name}@.service
 
 %postun
 %systemd_postun_with_restart %{name}@.service 
 
 %files
 %defattr(-,root,root,-)
-%doc README.txt LICENSE.txt CONTRIBUTORS.txt
+%doc README.md LICENSE AUTHORS
 %{_bindir}/syncthing
 %{_unitdir}/%{name}@.service
 
 %changelog
+
+* Mon Sep 28 2015 Alexey Pakseykin <uvsmtid@gmail.com> 0.11.25-1.0
+- Update to Syncthing v0.11.25.
+
+* Sat Mar 28 2015 Alexey Pakseykin <uvsmtid@gmail.com> 0.10.29-1.0
+- Update spec file to the latest v0.10.29 syncthing sources.
+
 * Fri Nov 28 2014 David Strauss <thunderbirdtr@fedoraproject.org> 0.10.8-2.0
 - Initial version
+
